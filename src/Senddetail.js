@@ -8,7 +8,9 @@ export default function Senddetail({info}) {
     const handledropdownChange=(e)=>{
         async function abc(){
           try {
-            const res = await axios.post("https://smsserviceapi.herokuapp.com/sendsms", { "num":""+info.phone});
+            // const res = await axios.post("https://localhost:3001/sendsms", { "num":""+info.phone});
+
+            const res = await axios.post(" https://smsserviceapi.herokuapp.com/sendsms", { "num":""+info.phone});
             console.log(res)
           } catch (err) {  
           }      

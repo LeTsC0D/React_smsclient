@@ -42,7 +42,10 @@ function App() {
       {
         (contactinfoflag===1) && <Contactinfo info={contact[indexcontactinfo]} sethistory={createhistory}/>
       }
-
+        <br />
+        <br />
+        <br />
+        <br />
         <select  style={{width:100}}>
           {
           history.map((item,index) => (

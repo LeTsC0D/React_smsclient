@@ -3,7 +3,7 @@ import Senddetail from './Senddetail'
 import {Routes,Route,useNavigate } from 'react-router-dom';
 
 
-export default function Contactinfo({info}) {
+export default function Contactinfo({info,sethistory}) {
   const navigate = useNavigate();
 
   const handlesend=(e)=>{
@@ -20,7 +20,7 @@ export default function Contactinfo({info}) {
        
         <button onClick={(e)=>handlesend(e)}>Send Message</button>
         <Routes>
-          <Route path="/sendOTP" element={<Senddetail info={info}/>} />
+          <Route path="/sendOTP" element={<Senddetail info={info} sethistory={sethistory}/>} />
         </Routes>
 
     </div>

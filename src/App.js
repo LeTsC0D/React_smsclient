@@ -11,6 +11,14 @@ function App() {
     {firstname:"krishna",lastname:"srivastva",phone:"8987383244"}
   ]
 
+  const [history,setHistory]=useState([])
+
+  const createhistory=(param)=>{
+    const allhistory=[...history,param]
+    var ans=allhistory.sort((a,b)=>b.time-a.time)
+    setHistory(ans)
+  }
+
   const handledropdownChange=(e)=>{
     setcontactinfoflag(1)
     setindexcontactinfo(e.target.value)
@@ -32,9 +40,18 @@ function App() {
 
 
       {
-        (contactinfoflag===1) && <Contactinfo info={contact[indexcontactinfo]}/>
+        (contactinfoflag===1) && <Contactinfo info={contact[indexcontactinfo]} sethistory={createhistory}/>
       }
 
+        <select  style={{width:100}}>
+          {
+          history.map((item,index) => (
+            <option key={index} value={index}>
+              {"Fullname: "+item.fullname+" Time: "+new Date(item.time)+" OTP: "+item.otp}
+            </option>
+          ))
+          }
+      </select>
 
       </header>
     </div>

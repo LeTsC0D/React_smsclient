@@ -2,7 +2,7 @@ import React from 'react'
 import {useNavigate } from 'react-router-dom';
 import axios from 'axios'
 
-export default function Senddetail({info}) {
+export default function Senddetail({info,sethistory}) {
   const navigate = useNavigate();
     const otp=Math.floor(100000 + Math.random() * 900000);
     const handledropdownChange=(e)=>{
@@ -16,6 +16,7 @@ export default function Senddetail({info}) {
           }      
         }
         abc() 
+        sethistory({fullname:info.firstname+" "+info.lastname,time:(new Date).getTime(),otp:otp})
         navigate('/');
       }
 

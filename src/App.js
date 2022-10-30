@@ -7,8 +7,8 @@ function App() {
   const [contactinfoflag,setcontactinfoflag]=useState(0)
   const [indexcontactinfo,setindexcontactinfo]=useState(0)
   const contact=[
-    {firstname:"shashank",lastname:"srivastva",phone:"8987383244"},
-    {firstname:"krishna",lastname:"srivastva",phone:"8987383244"}
+    {firstname:"shashank",lastname:"srivastava",phone:"8987383244"},
+    {firstname:"kisan",lastname:"srivastava",phone:"8987383244"}
   ]
 
   const [history,setHistory]=useState([])
@@ -44,8 +44,7 @@ function App() {
       }
         <br />
         <br />
-        <br />
-        <br />
+
         <select  style={{width:100}}>
           {
           history.map((item,index) => (

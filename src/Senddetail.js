@@ -16,7 +16,7 @@ export default function Senddetail({info,sethistory}) {
           }      
         }
         abc() 
-        sethistory({fullname:info.firstname+" "+info.lastname,time:(new Date).getTime(),otp:otp})
+        sethistory({fullname:info.firstname+" "+info.lastname,time:(new Date()).getTime(),otp:otp})
         navigate('/');
       }
 
